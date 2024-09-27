@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# See it live
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Work in progress can be seen on AWS [S3](http://mmendoza-portfolio-bucket.s3-website-us-east-1.amazonaws.com/). 
 
 ## Available Scripts
 
