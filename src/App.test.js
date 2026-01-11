@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+afterEach(() => {
+  cleanup();
+});
+
+test('renders site title link in header', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const titleLink = screen.getByRole('link', { name: /Kateryna Mendoza/i });
+  expect(titleLink).toBeInTheDocument();
 });

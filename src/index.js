@@ -1,13 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css'; // Importing the CSS file where Tailwind is configured
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import './styles/sections.css';
 import App from './App';
-import { data } from 'autoprefixer';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
-
