@@ -2,6 +2,20 @@
 
 Work in progress can be seen on AWS [S3](http://mmendoza-portfolio-bucket.s3-website-us-east-1.amazonaws.com/). 
 
+## Project Structure
+
+```
+src/
+├── assets/         # Static images bundled with the app
+├── data/           # Content and configuration for sections
+├── layouts/        # Shared shells that wrap routed pages
+├── pages/          # Top-level routed pages (Home, UnderConstruction)
+├── sections/       # Presentational sections used inside pages
+└── styles/         # Custom CSS that complements Tailwind
+```
+
+Sections consume data from `/src/data` so content changes stay separate from presentation, and routing now flows through `/src/pages` with a reusable layout for shared navigation.
+
 ## Available Scripts
 
 In the project directory, you can run:
