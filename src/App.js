@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import UnderConstruction from './pages/UnderConstruction';
+import MyPortfolioProject from './pages/MyPortfolioProject';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projects/my-portfolio" element={<MyPortfolioProject />} />
           <Route path="/under-construction" element={<UnderConstruction />} />
         </Routes>
       </MainLayout>
