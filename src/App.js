@@ -4,6 +4,8 @@ import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import UnderConstruction from './pages/UnderConstruction';
 import MyPortfolioProject from './pages/MyPortfolioProject';
+import PartyOnSiteProject from './pages/PartyOnSiteProject';
+import ErgCoachProject from './pages/ErgCoachProject';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects/my-portfolio" element={<MyPortfolioProject />} />
+          <Route path="/projects/party-on-site" element={<PartyOnSiteProject />} />
+          <Route path="/projects/erg-coach" element={<ErgCoachProject />} />
           <Route path="/under-construction" element={<UnderConstruction />} />
         </Routes>
       </MainLayout>
