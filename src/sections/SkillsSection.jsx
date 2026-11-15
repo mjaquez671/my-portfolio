@@ -3,25 +3,19 @@ import { skillSet } from '../data/skills';
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-12 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">My Skills</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <section id="skills" className="py-20 bg-sand scroll-mt-20">
+      <div className="container mx-auto px-6">
+        <h2 className="font-serif text-4xl font-semibold text-ink mb-10">Skills</h2>
+        <ul className="flex flex-wrap gap-3">
           {skillSet.map((skill) => (
-            <div key={skill.name}>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-lg font-bold">{skill.name}</h3>
-                <span className="text-sm text-gray-600">{skill.level}%</span>
-              </div>
-              <div className="w-full bg-gray-200 h-4 rounded-full overflow-hidden">
-                <div
-                  className="bg-indigo-600 h-4 rounded-full"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
-            </div>
+            <li
+              key={skill}
+              className="px-5 py-2 rounded-full bg-parchment border border-clay/40 text-ink font-medium"
+            >
+              {skill}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

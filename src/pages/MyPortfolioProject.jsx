@@ -24,21 +24,21 @@ const architectureSteps = [
 ];
 
 const featureHighlights = [
-  'Hero section with a typewriter-style intro and rotating role carousel.',
+  'Hero section with a typewriter-style intro and a featured latest-project showcase.',
   'Modular sections powered by separate data files for easy updates.',
-  'Tailwind utility classes plus lightweight custom CSS for animations.',
+  'Custom Tailwind theme: an earth-tone palette (espresso, umber, sand, gold) with Fraunces and Inter type.',
   'Reusable layout with sticky navigation and React Router pages.',
   'Optimized asset pipeline with shared image exports and lazy-friendly structure.',
 ];
 
 const MyPortfolioProject = () => {
   return (
-    <section className="py-12 bg-gray-50 min-h-screen">
+    <section className="py-12 bg-parchment min-h-screen">
       <div className="container mx-auto px-4 lg:px-8">
         <header className="mb-10">
-          <p className="text-sm uppercase tracking-wide text-indigo-600 font-semibold">Case Study</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">My Portfolio Platform</h1>
-          <p className="mt-4 text-lg text-gray-700 max-w-3xl">
+          <p className="font-serif italic text-lg text-gold-dark">Case Study</p>
+          <h1 className="font-serif text-4xl font-semibold text-ink mt-2">My Portfolio Platform</h1>
+          <p className="mt-4 text-lg text-umber max-w-3xl">
             A single-page React application that showcases my work while doubling as a live demo of my
             front-end workflow, AWS hosting strategy, and continuous delivery approach.
           </p>
@@ -46,30 +46,30 @@ const MyPortfolioProject = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <article className="lg:col-span-2 bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-2xl font-semibold mb-4">Feature Highlights</h2>
-            <ul className="space-y-3 list-disc list-inside text-gray-700">
+            <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Feature Highlights</h2>
+            <ul className="space-y-3 list-disc list-outside pl-5 marker:text-clay text-umber">
               {featureHighlights.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
           <article className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-2xl font-semibold mb-4">Tech Snapshot</h2>
-            <dl className="space-y-3 text-gray-700">
+            <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Tech Snapshot</h2>
+            <dl className="space-y-3 text-umber">
               <div>
-                <dt className="font-medium text-gray-900">Framework</dt>
+                <dt className="font-medium text-ink">Framework</dt>
                 <dd>React 18, React Router 6</dd>
               </div>
               <div>
-                <dt className="font-medium text-gray-900">Styling</dt>
-                <dd>Tailwind CSS, custom animations</dd>
+                <dt className="font-medium text-ink">Styling</dt>
+                <dd>Tailwind CSS, custom theme</dd>
               </div>
               <div>
-                <dt className="font-medium text-gray-900">Build Tool</dt>
+                <dt className="font-medium text-ink">Build Tool</dt>
                 <dd>create-react-app scripts</dd>
               </div>
               <div>
-                <dt className="font-medium text-gray-900">Deployment</dt>
+                <dt className="font-medium text-ink">Deployment</dt>
                 <dd>S3 static site + CloudFront CDN</dd>
               </div>
             </dl>
@@ -78,9 +78,9 @@ const MyPortfolioProject = () => {
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {architectureSteps.map((step) => (
-            <article key={step.title} className="bg-white rounded-lg shadow-md p-6 border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-              <p className="text-gray-700">{step.description}</p>
+            <article key={step.title} className="bg-white rounded-lg shadow-md p-6 border border-sand">
+              <h3 className="font-serif text-xl font-semibold text-ink mb-2">{step.title}</h3>
+              <p className="text-umber">{step.description}</p>
             </article>
           ))}
         </section>

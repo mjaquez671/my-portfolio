@@ -50,12 +50,12 @@ const dataFlow = [
 
 const ErgCoachProject = () => {
   return (
-    <section className="py-12 bg-gray-50 min-h-screen">
+    <section className="py-12 bg-parchment min-h-screen">
       <div className="container mx-auto px-4 lg:px-8">
         <header className="mb-12">
-          <p className="text-xs uppercase tracking-[0.25em] text-emerald-500 font-semibold">Case Study</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">Erg Coach Race Tracker</h1>
-          <p className="mt-4 text-lg text-gray-700 max-w-4xl">
+          <p className="font-serif italic text-lg text-gold-dark">Case Study</p>
+          <h1 className="font-serif text-4xl font-semibold text-ink mt-2">Erg Coach Race Tracker</h1>
+          <p className="mt-4 text-lg text-umber max-w-4xl">
             A real-time race companion for rowing programs. Coaches watch synchronized dashboards, configure heats before
             the whistle, and drop sticky-note reminders fueled by the official race website so crews hit their targets.
           </p>
@@ -63,16 +63,16 @@ const ErgCoachProject = () => {
 
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {stats.map((stat) => (
-            <div key={stat.label} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
-              <p className="text-xs uppercase tracking-wide text-gray-500 font-semibold">{stat.label}</p>
-              <p className="text-lg font-semibold text-gray-900 mt-2">{stat.value}</p>
+            <div key={stat.label} className="bg-white border border-sand rounded-xl p-6 shadow-sm">
+              <p className="text-sm font-medium text-umber">{stat.label}</p>
+              <p className="text-lg font-semibold text-ink mt-2">{stat.value}</p>
             </div>
           ))}
         </section>
 
-        <article className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Why coaches rely on it</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-3">
+        <article className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-sand">
+          <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Why coaches rely on it</h2>
+          <ul className="list-disc list-outside pl-5 marker:text-clay text-umber space-y-3">
             {highlights.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -81,41 +81,41 @@ const ErgCoachProject = () => {
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {architecture.map((item) => (
-            <article key={item.title} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-gray-700">{item.description}</p>
+            <article key={item.title} className="bg-white rounded-xl p-6 shadow-md border border-sand">
+              <h3 className="font-serif text-xl font-semibold text-ink mb-2">{item.title}</h3>
+              <p className="text-umber">{item.description}</p>
             </article>
           ))}
         </section>
 
-        <section className="bg-gray-900 rounded-2xl p-8 text-white mb-12">
-          <h2 className="text-2xl font-semibold mb-6">Race-day flow</h2>
+        <section className="bg-espresso rounded-2xl p-8 text-sand mb-12">
+          <h2 className="font-serif text-2xl font-semibold text-parchment mb-6">Race-day flow</h2>
           <div className="space-y-6">
             {dataFlow.map((item, index) => (
               <div key={item.title} className="flex flex-col md:flex-row md:items-start md:gap-6">
-                <div className="flex-none w-12 h-12 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center mb-4 md:mb-0">
+                <div className="flex-none w-12 h-12 rounded-full bg-gold text-espresso font-bold flex items-center justify-center mb-4 md:mb-0">
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <p className="text-gray-100 mt-1">{item.body}</p>
+                  <h3 className="font-serif text-xl font-semibold text-parchment">{item.title}</h3>
+                  <p className="text-sand/85 mt-1">{item.body}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="bg-white border border-dashed border-emerald-300 rounded-2xl p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <section className="bg-white border border-dashed border-clay/50 rounded-2xl p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900">CloudFront-hosted beta</h2>
-            <p className="mt-2 text-gray-700">
+            <h2 className="font-serif text-2xl font-semibold text-ink">CloudFront-hosted beta</h2>
+            <p className="mt-2 text-umber">
               The tracker lives behind a private CloudFront distribution until the public coaching portal launches. Reach
               out if you want your team included in the next beta cohort.
             </p>
           </div>
           <a
             href="/under-construction"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 transition text-base font-semibold text-white"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gold hover:bg-gold-light transition text-base font-semibold text-espresso"
           >
             Request access
           </a>

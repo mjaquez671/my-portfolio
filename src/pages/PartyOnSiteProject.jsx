@@ -50,12 +50,12 @@ const dataFlow = [
 
 const PartyOnSiteProject = () => {
   return (
-    <section className="py-12 bg-white min-h-screen">
+    <section className="py-12 bg-parchment min-h-screen">
       <div className="container mx-auto px-4 lg:px-10">
         <header className="mb-12">
-          <p className="text-sm uppercase tracking-wide text-pink-600 font-semibold">Case Study</p>
-          <h1 className="text-4xl font-bold text-gray-900 mt-2">Party On Site Experience Builder</h1>
-          <p className="mt-4 text-lg text-gray-700 max-w-4xl">
+          <p className="font-serif italic text-lg text-gold-dark">Case Study</p>
+          <h1 className="font-serif text-4xl font-semibold text-ink mt-2">Party On Site Experience Builder</h1>
+          <p className="mt-4 text-lg text-umber max-w-4xl">
             A themable event hub for parallel bachelorette and bachelor weekends. The app hydrates itself from a
             Lambda-backed API, keeps UI chrome in sync with the resolved theme, and gives crews shareable assets,
             from QR-coded "buy a drink" flows to downloadable weekend cards, all without redeploying.
@@ -64,16 +64,16 @@ const PartyOnSiteProject = () => {
 
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {stats.map((stat) => (
-            <div key={stat.label} className="bg-gray-50 border border-gray-100 rounded-xl p-6 shadow-sm">
-              <p className="text-xs uppercase tracking-wide text-gray-500 font-semibold">{stat.label}</p>
-              <p className="text-lg font-semibold text-gray-900 mt-2">{stat.value}</p>
+            <div key={stat.label} className="bg-parchment border border-sand rounded-xl p-6 shadow-sm">
+              <p className="text-sm font-medium text-umber">{stat.label}</p>
+              <p className="text-lg font-semibold text-ink mt-2">{stat.value}</p>
             </div>
           ))}
         </section>
 
-        <article className="bg-gray-50 rounded-2xl shadow-inner p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Why it resonates</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-3">
+        <article className="bg-parchment rounded-2xl border border-sand p-8 mb-12">
+          <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Why it resonates</h2>
+          <ul className="list-disc list-outside pl-5 marker:text-clay text-umber space-y-3">
             {highlights.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -82,34 +82,34 @@ const PartyOnSiteProject = () => {
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {architecture.map((item) => (
-            <article key={item.title} className="bg-white border border-gray-100 rounded-xl p-6 shadow-md">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-gray-700">{item.description}</p>
+            <article key={item.title} className="bg-white border border-sand rounded-xl p-6 shadow-md">
+              <h3 className="font-serif text-xl font-semibold text-ink mb-2">{item.title}</h3>
+              <p className="text-umber">{item.description}</p>
             </article>
           ))}
         </section>
 
-        <section className="bg-white border border-gray-100 rounded-2xl p-8 shadow-lg mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Data flow in practice</h2>
+        <section className="bg-white border border-sand rounded-2xl p-8 shadow-lg mb-12">
+          <h2 className="font-serif text-2xl font-semibold text-ink mb-6">Data flow in practice</h2>
           <div className="space-y-6">
             {dataFlow.map((item, index) => (
               <div key={item.title} className="flex flex-col md:flex-row md:items-start md:gap-6">
-                <div className="flex-none w-12 h-12 rounded-full bg-pink-100 text-pink-700 font-bold flex items-center justify-center mb-4 md:mb-0">
+                <div className="flex-none w-12 h-12 rounded-full bg-sand text-gold-dark font-bold flex items-center justify-center mb-4 md:mb-0">
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                  <p className="text-gray-700 mt-1">{item.details}</p>
+                  <h3 className="font-serif text-xl font-semibold text-ink">{item.title}</h3>
+                  <p className="text-umber mt-1">{item.details}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="bg-gray-900 rounded-2xl p-8 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <section className="bg-espresso rounded-2xl p-8 text-sand flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <h2 className="text-2xl font-semibold">See it live</h2>
-            <p className="mt-2 text-gray-200">
+            <h2 className="font-serif text-2xl font-semibold text-parchment">See it live</h2>
+            <p className="mt-2 text-sand/80">
               Explore the event catalog that powers these experiences, complete with live weekend slugs and crew content.
             </p>
           </div>
@@ -117,7 +117,7 @@ const PartyOnSiteProject = () => {
             href="https://events.devworx.us/events/2025-palm-springs"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-pink-500 hover:bg-pink-400 transition text-base font-semibold text-white"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gold hover:bg-gold-light transition text-base font-semibold text-espresso"
           >
             Visit Lena Monroe's Palm Springs Send-Off
           </a>

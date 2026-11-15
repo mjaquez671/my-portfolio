@@ -2,18 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { heroDetails } from '../data/hero';
 
 const HeroSection = () => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [typedGreeting, setTypedGreeting] = useState('');
-  const { name, roles, resume } = heroDetails;
+  const { name, role, tagline, resume } = heroDetails;
   const greeting = `Hi, I'm ${name}`;
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 4000);
-
-    return () => clearInterval(intervalId);
-  }, [roles.length]);
 
   useEffect(() => {
     let charIndex = 0;
@@ -31,21 +22,32 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+      className="min-h-[calc(100vh-4.5rem)] flex items-center bg-espresso bg-[radial-gradient(ellipse_at_top_right,_#3B2E22,_#211A14_65%)] text-sand"
     >
-      <div className="text-center px-4">
-        <h1 className="text-white text-5xl font-bold">
-          {typedGreeting}
-          <span className="ml-1 text-white animate-pulse">|</span>
+      <div className="container mx-auto px-6 py-24">
+        <p className="font-serif italic text-xl text-gold mb-4">{role}</p>
+        <h1 className="font-serif text-5xl md:text-7xl font-semibold text-parchment" aria-label={greeting}>
+          <span aria-hidden="true">
+            {typedGreeting}
+            <span className="ml-1 text-gold animate-pulse">|</span>
+          </span>
         </h1>
-        <p className="text-white text-xl mt-4 carousel-text">{roles[currentTextIndex]}</p>
-        <a
-          href={resume.url}
-          download
-          className="inline-block mt-6 px-8 py-4 bg-white text-indigo-600 font-semibold rounded-md shadow-md hover:bg-gray-100 transition-colors"
-        >
-          {resume.label}
-        </a>
+        <p className="mt-6 max-w-xl text-lg text-sand/80 leading-relaxed">{tagline}</p>
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href={resume.url}
+            download
+            className="px-7 py-3 rounded-md bg-gold text-espresso font-semibold hover:bg-gold-light transition-colors"
+          >
+            {resume.label}
+          </a>
+          <a
+            href="#projects"
+            className="px-7 py-3 rounded-md border border-gold/60 text-gold font-semibold hover:bg-gold/10 transition-colors"
+          >
+            View Projects
+          </a>
+        </div>
       </div>
     </section>
   );
