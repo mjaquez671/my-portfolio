@@ -1,8 +1,8 @@
 export const heroDetails = {
   name: 'Mario',
-  role: 'Software Engineer',
+  role: 'Senior Software Engineer',
   tagline:
-    'I build cloud, embedded, and self-hosted AI systems, from sensor boards to the services behind them.',
+    'Cloud migrations, CI/CD, and production support in regulated environments. Hardware and self-hosted AI on the side.',
   resume: {
     label: 'Download Resume',
     url: '/Resume-Mario-Mendoza.pdf',

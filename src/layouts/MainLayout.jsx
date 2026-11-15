@@ -1,12 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
+  { href: '/#experience', label: 'Experience' },
   { href: '/#projects', label: 'Projects' },
   { href: '/#skills', label: 'Skills' },
 ];
 
 const MainLayout = ({ children }) => {
+  const { pathname, hash } = useLocation();
+
+  // Start each new page at the top; leave in-page anchors (/#projects) alone.
+  useEffect(() => {
+    if (!hash) window.scrollTo(0, 0);
+  }, [pathname, hash]);
+
   return (
     <div className="min-h-screen flex flex-col bg-parchment">
       <header className="sticky top-0 z-50 bg-espresso/95 backdrop-blur border-b border-bark">
@@ -27,8 +35,13 @@ const MainLayout = ({ children }) => {
         </div>
       </header>
       <main className="flex-1">{children}</main>
-      <footer className="bg-espresso border-t border-bark text-sand/60 py-8 text-center text-sm">
-        © {new Date().getFullYear()} Mario Mendoza. All rights reserved.
+      <footer className="bg-espresso border-t border-bark text-sand/60 py-8 text-sm">
+        <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p>© {new Date().getFullYear()} Mario Mendoza. All rights reserved.</p>
+          <Link to="/projects/my-portfolio" className="text-gold hover:text-gold-light hover:underline underline-offset-4">
+            How this site is built →
+          </Link>
+        </div>
       </footer>
     </div>
   );

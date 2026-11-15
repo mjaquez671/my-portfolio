@@ -10,7 +10,7 @@ const stats = [
 const highlights = [
   'Configurable storytelling lets bachelorette and bachelor hosts update hero text, highlights, itinerary cards, and crew bios straight from DynamoDB without new deployments.',
   'Theme toggles drive an adaptive design system that remaps typography, gradients, and CTA treatments to match each crew\'s vibe while preserving accessibility contrast.',
-  'Share-ready artifacts export hidden DOM nodes into PNG weekend cards and open QR-driven \"buy a drink\" flows with keyboard-friendly modals.',
+  'Share-ready artifacts export hidden DOM nodes into PNG weekend cards and open QR-driven "buy a drink" flows with keyboard-friendly modals.',
   'Co-event awareness links paired weekend slugs (bachelorette <-> bachelor) so guests can bounce between itineraries without duplicating code.',
   'SEO metadata, smooth anchor routing, and slug-safe paths keep every event link sharable whether it starts on /event/:slug or /events/:slug.',
 ];
@@ -64,14 +64,14 @@ const PartyOnSiteProject = () => {
 
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {stats.map((stat) => (
-            <div key={stat.label} className="bg-parchment border border-sand rounded-xl p-6 shadow-sm">
+            <div key={stat.label} className="bg-sand rounded-xl p-6 shadow-sm border border-clay/20">
               <p className="text-sm font-medium text-umber">{stat.label}</p>
               <p className="text-lg font-semibold text-ink mt-2">{stat.value}</p>
             </div>
           ))}
         </section>
 
-        <article className="bg-parchment rounded-2xl border border-sand p-8 mb-12">
+        <article className="bg-sand rounded-2xl p-8 mb-12 border border-clay/20">
           <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Why it resonates</h2>
           <ul className="list-disc list-outside pl-5 marker:text-clay text-umber space-y-3">
             {highlights.map((item) => (
@@ -82,19 +82,19 @@ const PartyOnSiteProject = () => {
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {architecture.map((item) => (
-            <article key={item.title} className="bg-white border border-sand rounded-xl p-6 shadow-md">
+            <article key={item.title} className="bg-sand rounded-xl p-6 shadow-sm border border-clay/20">
               <h3 className="font-serif text-xl font-semibold text-ink mb-2">{item.title}</h3>
               <p className="text-umber">{item.description}</p>
             </article>
           ))}
         </section>
 
-        <section className="bg-white border border-sand rounded-2xl p-8 shadow-lg mb-12">
+        <section className="bg-sand rounded-2xl p-8 shadow-sm mb-12 border border-clay/20">
           <h2 className="font-serif text-2xl font-semibold text-ink mb-6">Data flow in practice</h2>
           <div className="space-y-6">
             {dataFlow.map((item, index) => (
               <div key={item.title} className="flex flex-col md:flex-row md:items-start md:gap-6">
-                <div className="flex-none w-12 h-12 rounded-full bg-sand text-gold-dark font-bold flex items-center justify-center mb-4 md:mb-0">
+                <div className="flex-none w-12 h-12 rounded-full bg-gold text-espresso font-bold flex items-center justify-center mb-4 md:mb-0">
                   {index + 1}
                 </div>
                 <div>

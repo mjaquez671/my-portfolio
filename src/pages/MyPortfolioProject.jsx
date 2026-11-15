@@ -45,7 +45,7 @@ const MyPortfolioProject = () => {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <article className="lg:col-span-2 bg-white shadow-lg rounded-lg p-6">
+          <article className="lg:col-span-2 bg-sand shadow-sm rounded-lg p-6 border border-clay/20">
             <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Feature Highlights</h2>
             <ul className="space-y-3 list-disc list-outside pl-5 marker:text-clay text-umber">
               {featureHighlights.map((item) => (
@@ -53,7 +53,7 @@ const MyPortfolioProject = () => {
               ))}
             </ul>
           </article>
-          <article className="bg-white shadow-lg rounded-lg p-6">
+          <article className="bg-sand shadow-sm rounded-lg p-6 border border-clay/20">
             <h2 className="font-serif text-2xl font-semibold text-ink mb-4">Tech Snapshot</h2>
             <dl className="space-y-3 text-umber">
               <div>
@@ -78,7 +78,7 @@ const MyPortfolioProject = () => {
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {architectureSteps.map((step) => (
-            <article key={step.title} className="bg-white rounded-lg shadow-md p-6 border border-sand">
+            <article key={step.title} className="bg-sand rounded-lg shadow-sm p-6 border border-clay/20">
               <h3 className="font-serif text-xl font-semibold text-ink mb-2">{step.title}</h3>
               <p className="text-umber">{step.description}</p>
             </article>
