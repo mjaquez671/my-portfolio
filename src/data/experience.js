@@ -11,8 +11,8 @@ export const experience = [
   },
   {
     company: 'Carrier Global',
-    title: 'Senior Software Engineer / Software Engineer',
-    dates: 'Aug 2022 – Jan 2025 · promoted Aug 2023',
+    title: 'Senior Software Engineer',
+    dates: 'Aug 2022 – Jan 2025',
     highlights: [
       'Led the modernization of the air handling unit selection software behind every commercial AHU built in North America; owned the architecture and mentored ~6 engineers.',
       'Moved business logic from a JavaFX desktop client to Python Lambdas behind API Gateway in phases (strangler pattern), with a local cache and fallback so failures never blocked users.',
@@ -22,7 +22,7 @@ export const experience = [
   {
     company: 'Vertical Aerospace',
     title: 'Engineer, Automation & IoT',
-    dates: 'May 2019 – Aug 2022 · intern → full-time',
+    dates: 'May 2019 – Aug 2022',
     highlights: [
       'Built a .NET quality-inspection system that cut inspection cycle time from hours to minutes and prevented production rework.',
       'Designed a low-power RF sensor network with Raspberry Pi dashboards, and prototyped AWS IoT ingestion for the sensor data.',
