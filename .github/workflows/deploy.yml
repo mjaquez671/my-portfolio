@@ -1,0 +1,44 @@
+name: Deploy
+
+# Each release branch publishes to its own site:
+#   release/mario -> GitHub environment "mario" (its own S3 bucket + CloudFront distribution)
+#   release/kate  -> GitHub environment "kate"
+on:
+  push:
+    branches:
+      - release/mario
+      - release/kate
+  workflow_dispatch: # manual run from the Actions tab; pick a release branch when running it
+
+permissions:
+  id-token: write # lets the job sign in to AWS with OIDC (no stored access keys)
+  contents: read
+
+jobs:
+  deploy:
+    if: github.ref_name == 'release/mario' || github.ref_name == 'release/kate'
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name == 'release/kate' && 'kate' || 'mario' }}
+    concurrency:
+      group: deploy-${{ github.ref_name }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - name: Build and deploy
+        run: bash scripts/deploy.sh
+        env:
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          CF_DISTRIBUTION_ID: ${{ secrets.CF_DISTRIBUTION_ID }}
